@@ -20,7 +20,7 @@
             Console.WriteLine(CalcoliHelper.ElevaAPotenza(2, 2));
             Console.WriteLine(CalcoliHelper.ElevaAPotenza(0, 2));
             Console.WriteLine(CalcoliHelper.ElevaAPotenza(2, 0));
-
+            Console.WriteLine(CalcoliHelper.ElevaAPotenza(2, -3));
         }
     }
 }

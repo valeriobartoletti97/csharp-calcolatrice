@@ -79,7 +79,7 @@ namespace csharp_calcolatrice
             else Console.WriteLine("I numeri sono uguali");
             return 0;
         }
-        public static int ElevaAPotenza(int num1, int num2)
+        public static decimal ElevaAPotenza(decimal num1, decimal num2)
         {
             if (num1 == 0)
             {
@@ -93,7 +93,7 @@ namespace csharp_calcolatrice
 
             else if (num1 != 0 && num2 > 0)
             {
-                int result = 1;
+                decimal result = 1;
                 for (int i = 0; i < num2; i++)
                 {
                     result *= num1;
@@ -103,12 +103,15 @@ namespace csharp_calcolatrice
             }
             else
             {
-                int result = 1;
-                for (int i = 0; i < num2; i++)
+                decimal result = num1;
+                result = 1 / result;
+                num2 = -num2;
+                decimal moltiplicatore = 1 / num1;
+                for (int i = 1; i < num2; i++)
                 {
-                    result *= num1;
+                    result *= moltiplicatore;
                 }
-                return (1 / result);
+                return result;
             }
         }
     }
